@@ -1,177 +1,33 @@
 # Disaster Tweet Detection
 
-Real-time disaster-related text classification system using NLP, TF-IDF, Logistic Regression, and Streamlit.
-
----
+This project aims to detect tweets related to disaster situations using machine learning techniques.
 
 ## Overview
 
-This project detects whether social media/news text is related to a real disaster or not.
+Twitter is a popular social media platform where users often share information during emergency situations such as natural disasters, accidents, or crises. This project leverages machine learning algorithms to classify tweets as either disaster-related or non-disaster-related. The goal is to assist in real-time monitoring and response efforts during critical events.
 
-The system processes text from multiple sources such as:
+## Techniques Used
 
-* Reddit feeds
-* RSS news feeds
-* CSV-based simulated real-time streams
+- Natural Language Processing (NLP): Various NLP techniques are employed to process and analyze the textual content of tweets.
+- Text Preprocessing: Text data is cleaned and preprocessed by removing stop words, punctuation, stemming/lemmatization etc.
+- Feature Engineering: Relevant features, such as word frequency, n-grams, and TF-IDF (Term Frequency-Inverse Document Frequency), are extracted to represent the tweet data.
+- Machine Learning Classification: Classification models, such as Naive Bayes, Support Vector Machines (SVM), or Recurrent Neural Networks (RNNs), are trained to predict whether a tweet is related to a disaster or not.
 
-The text is classified as:
+## Data and Model Training
 
-* Hazard (Disaster-related)
-* Safe (Non-disaster)
+The project utilizes a labeled dataset of tweets, where each tweet is annotated as either disaster or non-disaster. The dataset is split into training and testing sets, and the classification models are trained using the training data. The trained models are then evaluated using the testing data to measure their performance and accuracy.
 
-The project also includes a Streamlit dashboard for live monitoring, metrics, charts, and map visualization.
-
----
-
-## Features
-
-* Real-time disaster text classification
-* TF-IDF + Logistic Regression NLP pipeline
-* Streamlit dashboard
-* Reddit and RSS feed integration
-* Simulated real-time streaming using CSV
-* Interactive charts and metrics
-* Map visualization using Folium
-* CSV export support
-
----
-
-## Project Structure
-
-```bash
-Disaster-Tweet-Detection/
-│
-├── appus.py
-├── appus_realtime.py
-├── appus_realtime_alternative.py
-├── tweet_model.pkl
-├── vectorizer.pkl
-├── train.csv
-├── test.csv
-├── sample_tweets.csv
-├── requirements.txt
-├── README.md
-├── PROJECT_EXPLANATION.md
-└── DATA_SOURCES_GUIDE.md
-```
-
----
-
-## Machine Learning Pipeline
-
-```text
-Raw Text
-   ↓
-Text Cleaning
-   ↓
-TF-IDF Vectorization
-   ↓
-Logistic Regression
-   ↓
-Hazard / Safe Prediction
-```
-
----
-
-## Dataset
-
-Dataset used:
-
-* Kaggle Disaster Tweets Dataset
-
-Files:
-
-* train.csv → training dataset
-* test.csv → testing dataset
-* sample_tweets.csv → simulated real-time demo data
-
----
-
-## Model Details
-
-* Algorithm: Logistic Regression
-* Feature Extraction: TF-IDF Vectorizer
-* Hyperparameter Tuning: GridSearchCV
-
-Evaluation Metrics:
-
-* Accuracy: ~89%
-* ROC-AUC: ~0.82
-
----
-
-## Technologies Used
-
-* Python
-* pandas
-* scikit-learn
-* Streamlit
-* Plotly
-* Folium
-* requests
-* BeautifulSoup
-
----
-
-## Installation
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Run Application
-
-Main application:
-
-```bash
-streamlit run appus_realtime_alternative.py
-```
-
-Basic classifier:
-
-```bash
-streamlit run appus.py
-```
-
-Twitter API version:
-
-```bash
-streamlit run appus_realtime.py
-```
-
----
-
-## Demo Flow
-
-1. Select data source
-2. Fetch posts/news
-3. Model predicts Hazard or Safe
-4. Dashboard updates metrics and charts
-5. Download results as CSV
-
----
-
-## Limitations
-
-* Sarcasm and figurative language handling is limited
-* Model trained mainly on Twitter-style text
-* Location detection is keyword-based
-* Twitter API and scraping reliability issues
-
----
 
 ## Future Improvements
 
-* BERT / Transformer models
-* Named Entity Recognition (NER)
-* FastAPI backend
-* Database integration
-* Model monitoring and retraining pipeline
+- Incorporating advanced deep learning models, such as Long Short-Term Memory (LSTM) networks, to improve classification accuracy.
+- Exploring ensemble techniques to combine multiple models and boost overall performance.
+- Enhancing the system to handle multi-language tweets and adaptability to various disaster scenarios.
 
----
+## Contributions
 
-## Author
+Contributions, bug reports, and feedback are welcome. Feel free to open issues or submit pull requests on the GitHub repository.
 
-Sowndarya
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).

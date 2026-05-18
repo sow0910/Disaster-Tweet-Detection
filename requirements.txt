@@ -1,0 +1,11 @@
+streamlit
+pandas
+requests
+snscrape
+plotly
+folium
+streamlit-folium
+streamlit-autorefresh
+beautifulsoup4
+joblib
+tweepy
